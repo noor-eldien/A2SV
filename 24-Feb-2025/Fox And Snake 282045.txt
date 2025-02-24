@@ -1,0 +1,100 @@
+# Problem: Fox And Snake - https://codeforces.com/problemset/problem/510/A
+
+#include <iostream>
+#include <iomanip>
+#include <array>
+#include <string>
+#include <cstring>
+#include <cctype>
+#include <math.h>
+#include <algorithm>
+#include <numeric>
+#include <cmath>
+#include <vector>
+#include <queue>
+#include <stack>
+#include <deque>
+#include <set>
+#include <memory>
+#include <unordered_set>
+#include <map>
+#define ll long long
+#define el <<endl
+#define pb push_back
+#define pf push_front
+#define ppb  pop_back()
+#define ppf  pop_front()
+#define vi vector<int>
+#define all(v) ((v).begin()), ((v).end())
+#define allr(v) ((v).rbegin()), ((v).rend())
+#define F first
+#define S second
+#define _nuggets  ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+
+using namespace std;
+
+int main()
+{
+    _nuggets
+
+    int n,m;cin>>n>>m;
+    bool flg= false;
+    char c[n][m];
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < m; ++j)
+            c[i][j] = '.';
+
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            if (i%2==0)
+            {
+                c[i][j]='#';
+            }
+        }
+        if (i%2!=0)
+        {
+            if (flg== false)
+            {
+                c[i][m-1]='#';
+                flg= true;
+            }
+            else
+            {
+                c[i][0]='#';
+                flg= false;
+            }
+        }
+    }
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < m; ++j)
+            cout << c[i][j] ;
+        cout el;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
